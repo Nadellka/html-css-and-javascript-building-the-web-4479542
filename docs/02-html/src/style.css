@@ -1,0 +1,180 @@
+body {
+  font-family: cursive;
+  color: blueviolet;
+}
+
+h1 {
+  text-align: center;
+  /*Inheritance*/
+  color: brown
+}
+
+/*element selectors
+div {
+  background-color: lightcoral;
+}
+*/
+
+#left-container {
+  background-color: aqua;
+  left: 0px;
+}
+
+#right-container {
+  background-color: aqua;
+  right: 0px;
+}
+
+.container {
+  background-color: #eee;
+  width: 15%;
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  padding: 10px;
+}
+
+/*ID selectors*/
+/*#left-container {
+  background-color: aqua;
+  width: fit-content;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  height: fit-content;
+  padding: 10px;
+}
+
+
+#right-container {
+  background-color: aqua;
+  width: fit-content;
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  height: fit-content;
+  padding: 10px;
+}*/
+
+/*Class selectors*/
+.plant-holder {
+  position: relative;
+  height: 13%;
+  left: -10px;
+  /*right: -30px;*/
+}
+
+.plant {
+  position: absolute;
+  max-width: 150%;
+  max-height: 150%;
+  z-index: 2;
+}
+
+
+/*Descendant selectors*/
+#div img {
+  width: -1px;
+}
+
+/*Descendant selectors
+#left-container div img {
+  width: 100px;
+}*/
+
+/*Pseudo Class Selctors*/
+h1:hover {
+  color: blueviolet;
+}
+
+
+.jar-walls {
+  height: 80%;
+  width: 60%;
+  background: lightgray;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0.5%;
+  left: 20%;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.jar-top {
+  width: 50%;
+  height: 5%;
+  background: green;
+  position: absolute;
+  bottom: 80.5%;
+  left: 25%;
+  opacity: 0.7;
+  /*z-index: 1;*/
+}
+
+.jar-bottom {
+  width: 50%;
+  height: 1%;
+  background: green;
+  position: absolute;
+  bottom: 0%;
+  left: 25%;
+  opacity: 0.7;
+}
+
+.dirt {
+  width: 60%;
+  height: 5%;
+  background: #3a241d;
+  position: absolute;
+  border-radius: 0 0 1rem 1rem;
+  bottom: 1%;
+  left: 20%;
+  opacity: 0.7;
+  /*z-index: -1;*/
+}
+
+.jar-glossy-long {
+  width: 3%;
+  height: 20%;
+  border-radius: 2rem;
+  background: #ddfbff;
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+}
+
+.jar-glossy-short {
+  width: 3%;
+  height: 5%;
+  border-radius: 2rem;
+  background: #ddfbff;
+  position: absolute;
+  bottom: 45%;
+  left: 5%;
+}
+
+/* adding key-frame for animations*/
+@keyframes slide-in {
+  0% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(0%);
+  }
+
+}
+
+.plant {
+  animation: slide-in 5s ease-in;
+}
+
+.plant {
+  transition: width 1s, height 2s, background-color 2s;
+}
+
+.plant:hover {
+  width: 300px;
+  height: 300px;
+  background-color: coral;
+}
